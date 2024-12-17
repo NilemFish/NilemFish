@@ -29,7 +29,7 @@ body {
 
 
 /* Menyembunyikan menu pada ukuran layar kecil */
-.nav-list {
+.navbar .nav-list {
     display: flex;
 }
 
