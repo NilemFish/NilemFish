@@ -7,3 +7,11 @@ menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active"); // Menambahkan/menonaktifkan kelas 'active' pada menu
   menuToggle.classList.toggle("active"); // Menambahkan/menonaktifkan kelas 'active' pada tombol hamburger
 });
+
+// Menambahkan event listener untuk menutup menu ketika mengklik area luar menu
+document.addEventListener("click", (e) => {
+  if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+    navLinks.classList.remove("active"); // Menutup menu jika klik di luar menu dan tombol hamburger
+    menuToggle.classList.remove("active"); // Menonaktifkan animasi hamburger jika menu ditutup
+  }
+});
