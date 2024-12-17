@@ -85,6 +85,15 @@ body {
 .nav-links a:hover {
   text-decoration: underline;
 }
+/* Menambahkan transisi pada hover button */
+.btn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #FFC300;
+  transform: scale(1.1); /* Membesar sedikit saat hover */
+}
 
 /* Hero Section */
 .hero {
