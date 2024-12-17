@@ -188,7 +188,18 @@ body {
     margin: 0 auto;
   }
 }
-
+.copy-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contract-code {
+            font-family: monospace;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
 
 /* Footer */
 footer {
