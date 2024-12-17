@@ -11,79 +11,80 @@ body {
   color: #333;
 }
 
-/* Navbar */
-
-/* Navbar */
+/* Navbar Styling */
 .navbar {
   background: #007ACC;
   color: #fff;
   padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar .logo {
-  width: 100px; /* Sesuaikan ukuran logo */
+  width: 120px;
   height: auto;
 }
 
-.nav-links {
-  display: flex;
-}
-
-.nav-links li {
-  margin-left: 1rem;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-/* Menyembunyikan menu pada ukuran layar kecil */
-.nav-links {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  right: 10px;
-  background-color: #003E7E;
-  width: 100%;
-}
-
-.nav-links.active {
-  display: flex;
-}
-
 .menu-toggle {
-  display: flex;
+  display: none;
   flex-direction: column;
   cursor: pointer;
 }
 
 .bar {
-  width: 30px;
-  height: 3px;
-  margin: 5px 0;
   background-color: #fff;
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
 }
 
-/* Untuk ukuran layar kecil */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #FFD700;
+}
+
+/* Mobile Menu */
 @media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
   .nav-links {
     display: none;
+    flex-direction: column;
+    background-color: #003E7E;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
   }
 
   .nav-links.active {
     display: flex;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
   }
 }
 
