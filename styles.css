@@ -105,6 +105,32 @@ body {
   background: #FFC300;
 }
 
+
+/* Sections */
+.section {
+  padding: 2rem;
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+  color: #007ACC;
+}
+
+.section .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #007ACC;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.section .btn:hover {
+  background: #005EA6;
+}
+
+
 /* Footer */
 footer {
   text-align: center;
