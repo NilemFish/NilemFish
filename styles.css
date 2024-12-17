@@ -81,19 +81,19 @@ body {
   display: none;
   transition: transform 0.3s ease-in-out;
   flex-direction: column;
-  position: fixed; /* Mengubah menjadi posisi tetap untuk menutupi layar */
+  position: absolute; /* Ubah menjadi absolute, bukan fixed */
   top: 0;
   right: 0;
   background-color: #007ACC;
-  width: 100vw; /* Menutupi seluruh lebar layar */
-  height: 100vh; /* Menutupi seluruh tinggi layar */
+  width: 250px; /* Tentukan lebar menu yang lebih kecil */
+  height: 100%; /* Atur tinggi menu agar mencakup seluruh tinggi halaman */
   text-align: center;
-  transform: translateX(-100%); /* Menu awal tersembunyi */
+  transform: translateX(100%); /* Menu awal tersembunyi di luar layar */
 }
 
 .nav-links.active {
   display: flex; /* Pastikan menu menggunakan flex agar bisa teratur */
-  transform: translateX(0); /* Menu muncul dengan animasi */
+  transform: translateX(0); /* Menu muncul dari sisi kanan */
 }
 
 .nav-links li {
