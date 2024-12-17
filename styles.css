@@ -22,7 +22,8 @@ body {
 }
 
 .navbar .logo {
-  width: 100px; /* Ubah sesuai kebutuhan */
+    width: 100%;        /* Membuat logo responsif */
+    max-width: 150px;   /* Membatasi ukuran maksimum logo */
     height: auto;
 }
 
