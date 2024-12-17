@@ -11,81 +11,78 @@ body {
   color: #333;
 }
 
-/* Navbar Styling */
+/* Header */
 .navbar {
   background: #007ACC;
   color: #fff;
   padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.navbar .logo {
-  width: 120px;
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  display: block;
+}
+
+.logo {
+  width: 50px; /* Ukuran logo */
   height: auto;
 }
 
+/* Menu Toggle */
 .menu-toggle {
-  display: none;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
 }
 
-.bar {
-  background-color: #fff;
-  height: 3px;
-  width: 25px;
+.menu-toggle .bar {
+  background: #fff;
+  height: 4px;
+  width: 100%;
   margin: 3px 0;
+  border-radius: 2px;
 }
 
 .nav-links {
   list-style: none;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background-color: #007ACC;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links.active {
   display: flex;
 }
 
 .nav-links li {
-  margin-left: 2rem;
+  margin: 1rem 0;
 }
 
 .nav-links a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .nav-links a:hover {
-  color: #FFD700;
-}
-
-/* Mobile Menu */
-@media screen and (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #003E7E;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 1rem 0;
-    text-align: center;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 1rem 0;
-  }
+  text-decoration: underline;
 }
 
 /* Hero Section */
@@ -106,30 +103,6 @@ body {
 
 .hero .btn:hover {
   background: #FFC300;
-}
-
-/* Sections */
-.section {
-  padding: 2rem;
-}
-
-.section h2 {
-  margin-bottom: 1rem;
-  color: #007ACC;
-}
-
-.section .btn {
-  display: inline-block;
-  margin-top: 1rem;
-  background: #007ACC;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.section .btn:hover {
-  background: #005EA6;
 }
 
 /* Footer */
