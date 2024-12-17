@@ -36,6 +36,12 @@ body {
   height: auto;
 }
 
+/* Menambahkan efek animasi pada logo */
+.logo:hover {
+  transform: rotate(360deg); /* Logo akan berputar saat hover */
+  transition: transform 0.5s ease;
+}
+
 /* Menu Toggle */
 .menu-toggle {
   display: flex;
