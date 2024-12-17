@@ -22,29 +22,58 @@ body {
 }
 
 .navbar .logo {
-    width: 100%;        /* Membuat logo responsif */
-    max-width: 150px;   /* Membatasi ukuran maksimum logo */
-    height: auto;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
 }
 
-
-/* Menyembunyikan menu pada ukuran layar kecil */
-.navbar .nav-list {
-    display: flex;
+.nav-links {
+  list-style: none;
+  display: flex;
 }
 
+.nav-links li {
+  margin-left: 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+/* Mobile Menu */
 @media screen and (max-width: 768px) {
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        background-color: #333;
-    }
-    .nav-list.active {
-        display: flex;
-    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    background-color: #333;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
 
 /* Hero Section */
