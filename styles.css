@@ -21,32 +21,11 @@ body {
   z-index: 1000;
 }
 
-.logo {
-    width: 100px; /* Ubah sesuai kebutuhan */
+.navbar .logo {
+  width: 100px; /* Ubah sesuai kebutuhan */
     height: auto;
 }
 
-.navbar .logo {
-  font-size: 1.5rem;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-}
-
-.nav-links li {
-  margin-left: 1rem;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
 
 /* Menyembunyikan menu pada ukuran layar kecil */
 .nav-list {
