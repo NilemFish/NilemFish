@@ -81,11 +81,12 @@ body {
   display: none;
   transition: transform 0.3s ease-in-out;
   flex-direction: column;
-  position: absolute;
-  top: 70px;
+  position: fixed; /* Mengubah menjadi posisi tetap untuk menutupi layar */
+  top: 0;
   right: 0;
   background-color: #007ACC;
-  width: 100%;
+  width: 100vw; /* Menutupi seluruh lebar layar */
+  height: 100vh; /* Menutupi seluruh tinggi layar */
   text-align: center;
   transform: translateX(-100%); /* Menu awal tersembunyi */
 }
@@ -149,7 +150,6 @@ body {
   background: #FFC300;
 }
 
-
 /* Sections */
 .section {
   padding: 2rem;
@@ -173,7 +173,6 @@ body {
 .section .btn:hover {
   background: #005EA6;
 }
-
 
 /* Footer */
 footer {
