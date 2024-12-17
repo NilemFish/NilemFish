@@ -43,17 +43,17 @@ body {
 }
 
 /* Menu Toggle */
-.menu-toggle {
+#mobile-menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 50px;
-  height: 50px;
+  height: 50px; /* Ukuran area tombol hamburger */
   cursor: pointer;
 }
 
-.menu-toggle .bar {
+#mobile-menu .bar {
   background: #fff;
   height: 4px;
   width: 30px; /* Ukuran bar */
@@ -63,15 +63,15 @@ body {
 }
 
 /* Animasi ikon hamburger saat aktif */
-.menu-toggle.active .bar:nth-child(1) {
+#mobile-menu.active .bar:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
 
-.menu-toggle.active .bar:nth-child(2) {
+#mobile-menu.active .bar:nth-child(2) {
   opacity: 0;
 }
 
-.menu-toggle.active .bar:nth-child(3) {
+#mobile-menu.active .bar:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
@@ -118,66 +118,4 @@ body {
 .nav-links a:active {
   color: #FFD700;
   transform: scale(1.05); /* Efek saat diklik */
-}
-
-/* Menambahkan transisi pada hover button */
-.btn {
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #FFC300;
-  transform: scale(1.1); /* Membesar sedikit saat hover */
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(to right, #007ACC, #003E7E);
-  color: #fff;
-  text-align: center;
-  padding: 5rem 2rem;
-}
-
-.hero .btn {
-  background: #FFD700;
-  color: #333;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.hero .btn:hover {
-  background: #FFC300;
-}
-
-/* Sections */
-.section {
-  padding: 2rem;
-}
-
-.section h2 {
-  margin-bottom: 1rem;
-  color: #007ACC;
-}
-
-.section .btn {
-  display: inline-block;
-  margin-top: 1rem;
-  background: #007ACC;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.section .btn:hover {
-  background: #005EA6;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  background: #003E7E;
-  color: #fff;
-  padding: 1rem 0;
 }
