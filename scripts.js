@@ -8,7 +8,15 @@ menuToggle.addEventListener("click", () => {
   menuToggle.classList.toggle("active"); // Menambahkan/menonaktifkan kelas 'active' pada tombol hamburger
 });
 
-// Smooth Scroll untuk setiap link pada menu
+// Menambahkan event listener untuk menutup menu ketika mengklik area luar menu
+document.addEventListener("click", (e) => {
+  if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+    navLinks.classList.remove("active"); // Menutup menu jika klik di luar menu dan tombol hamburger
+    menuToggle.classList.remove("active"); // Menonaktifkan animasi hamburger jika menu ditutup
+  }
+});
+
+// Smooth Scroll
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
@@ -18,15 +26,31 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 
     // Tutup menu hamburger setelah klik di perangkat mobile
-    navLinks.classList.remove('active'); // Sembunyikan menu
-    menuToggle.classList.remove('active'); // Kembalikan ikon hamburger
+    navLinks.classList.remove('active');
+    menuToggle.classList.remove('active');
   });
 });
 
-// Menambahkan event listener untuk menutup menu ketika mengklik area luar menu
-document.addEventListener("click", (e) => {
-  if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
-    navLinks.classList.remove("active"); // Menutup menu jika klik di luar menu dan tombol hamburger
-    menuToggle.classList.remove("active"); // Menonaktifkan animasi hamburger jika menu ditutup
-  }
+// Highlight active link saat scroll
+window.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('section'); // Semua elemen section
+  const navLinks = document.querySelectorAll('.nav-links a'); // Semua link dalam navbar
+
+  sections.forEach(section => {
+    const top = window.scrollY; // Posisi scroll saat ini
+    const offset = section.offsetTop - 100; // Offset atas section dikurangi 100px
+    const height = section.offsetHeight; // Tinggi dari setiap section
+    const id = section.getAttribute('id'); // ID dari section saat ini
+
+    // Cek jika posisi scroll berada di dalam section
+    if (top >= offset && top < offset + height) {
+      // Hapus kelas 'active' dari semua link
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      // Tambahkan kelas 'active' ke link yang sesuai dengan section
+      document.querySelector(`.nav-links a[href="#${id}"]`).classList.add('active');
+    }
+  });
 });
