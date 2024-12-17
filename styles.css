@@ -96,13 +96,14 @@ body {
 
 .nav-links li {
   text-align: center;
-  margin: 1rem 1rem;
+  margin: 1rem 5rem;
 }
 
 .nav-links a {
   color: #fff;
   text-decoration: none;
   font-size: 1.2rem;
+  text-align: center;
   display: flex; /* Menjadikan elemen anchor fleksibel */
   align-items: center; /* Posisi vertikal di tengah */
   gap: 8px; /* Jarak antar elemen jika ada ikon atau teks */
