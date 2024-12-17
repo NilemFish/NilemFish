@@ -21,6 +21,11 @@ body {
   z-index: 1000;
 }
 
+.logo {
+    width: 100px; /* Ubah sesuai kebutuhan */
+    height: auto;
+}
+
 .navbar .logo {
   font-size: 1.5rem;
 }
@@ -41,6 +46,25 @@ body {
 
 .nav-links a:hover {
   text-decoration: underline;
+}
+
+/* Menyembunyikan menu pada ukuran layar kecil */
+.nav-list {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        background-color: #333;
+    }
+    .nav-list.active {
+        display: flex;
+    }
 }
 
 /* Hero Section */
