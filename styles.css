@@ -143,29 +143,58 @@ body {
 
 /* Sections */
 .section {
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
-.section h2 {
-  margin-bottom: 1rem;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
   color: #007ACC;
+  margin-bottom: 1rem;
 }
 
-.section .btn {
-  display: inline-block;
-  margin-top: 1rem;
-  background: #007ACC;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
-.section .btn:hover {
-  background: #005EA6;
-  transform: scale(1.1);
+.about-img-container {
+  flex: 0 0 300px; /* Mengatur lebar gambar */
 }
+
+.about-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Melengkungkan sudut gambar */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 
 /* Footer */
 footer {
