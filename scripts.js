@@ -1,8 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const menuToggle = document.querySelector("#mobile-menu");
-  const navList = document.querySelector(".nav-links");
+const menuToggle = document.querySelector("#mobile-menu");
+const navLinks = document.querySelector("#nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navList.classList.toggle("active");
-  });
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
