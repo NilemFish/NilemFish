@@ -1,0 +1,96 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: #007ACC;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #007ACC, #003E7E);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero .btn {
+  background: #FFD700;
+  color: #333;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero .btn:hover {
+  background: #FFC300;
+}
+
+/* Sections */
+.section {
+  padding: 2rem;
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+  color: #007ACC;
+}
+
+.section .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #007ACC;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.section .btn:hover {
+  background: #005EA6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #003E7E;
+  color: #fff;
+  padding: 1rem 0;
+}
