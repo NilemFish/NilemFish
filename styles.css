@@ -126,6 +126,7 @@ body {
 }
 
 .hero .btn {
+  max-height: 80%;
   background: #FFD700;
   color: #333;
   padding: 0.5rem 35%;
@@ -227,7 +228,8 @@ body {
     gap: 20px;
 }
 .buy-nifish{
-    margin-left: 2rem:
+    padding-left: 2rem:
+    margin-left: 20px:
 }
 
 .social-links a {
