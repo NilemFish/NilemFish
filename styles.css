@@ -12,6 +12,8 @@ body {
 }
 
 /* Navbar */
+
+/* Navbar */
 .navbar {
   background: #007ACC;
   color: #fff;
@@ -25,12 +27,11 @@ body {
 }
 
 .navbar .logo {
-  width: 120px; /* Sesuaikan ukuran logo */
+  width: 100px; /* Sesuaikan ukuran logo */
   height: auto;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
 }
 
@@ -47,32 +48,42 @@ body {
   text-decoration: underline;
 }
 
-.menu-toggle {
-  display: none; /* Sembunyikan menu toggle untuk desktop */
+/* Menyembunyikan menu pada ukuran layar kecil */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: #003E7E;
+  width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-  }
+.nav-links.active {
+  display: flex;
+}
 
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #fff;
+}
+
+/* Untuk ukuran layar kecil */
+@media screen and (max-width: 768px) {
   .nav-links {
     display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #007ACC;
-    position: absolute;
-    top: 60px;
-    left: 0;
   }
 
   .nav-links.active {
     display: flex;
-  }
-
-  .nav-links li {
-    margin: 1rem 0;
   }
 }
 
