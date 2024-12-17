@@ -113,6 +113,12 @@ body {
   transform: scale(1.1); /* Efek membesar saat hover */
 }
 
+.nav-links a.active {
+  color: #FFD700; /* Warna gold untuk link aktif */
+  font-weight: bold; /* Membuat teks aktif tebal */
+  border-bottom: 2px solid #FFD700; /* Garis bawah link aktif */
+}
+
 /* Hero Section */
 .hero {
   background: linear-gradient(to right, #007ACC, #003E7E);
