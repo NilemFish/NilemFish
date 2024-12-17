@@ -149,7 +149,6 @@ body {
   background: #FFC300;
 }
 
-
 /* Sections */
 .section {
   padding: 2rem;
@@ -173,7 +172,6 @@ body {
 .section .btn:hover {
   background: #005EA6;
 }
-
 
 /* Footer */
 footer {
