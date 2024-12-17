@@ -54,3 +54,11 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+function copyText() {
+        var text = document.getElementById("contract-code").innerText;
+        navigator.clipboard.writeText(text).then(function() {
+            alert("The contract has been copied successfully");
+        }).catch(function(err) {
+            alert("There is an error " + err);
+        });
+    }
