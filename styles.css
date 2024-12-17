@@ -34,6 +34,8 @@ body {
 .logo {
   width: 50px;
   height: auto;
+  border-radius: 50%; /* Membuat gambar menjadi bulat */
+  object-fit: cover; /* Menjaga gambar tetap proporsional */
 }
 
 /* Animasi logo */
